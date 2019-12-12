@@ -1,0 +1,191 @@
+:root {
+  /* Colors */
+  --bg-color: #1a202c;
+  --text-primary-color: #f7fafc;
+
+  --primary-color: #355587;
+  --complementary-color-1: #336797;
+  --complementary-color-2: #2c7aaa;
+  --secondary-color: #2690c1;
+
+  --gray-100: #cfd7dd;
+  --gray-200: #d6dee4;
+  --gray-300: #dee6eb;
+  --gray-400: #e4edf2;
+
+  --after-spacer: 20px;
+  --after-height: 5px;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: sans-serif;
+  color: var(--text-primary-color);
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_holder {
+  padding: 40px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_holder h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_holder h1::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--after-spacer) * -1);
+  width: 125px;
+  height: var(--after-height);
+  background: linear-gradient(
+    to right,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+}
+
+.logo_holder h1 img {
+  width: 175px;
+  height: auto;
+}
+
+.logo_holder h2 {
+  margin-top: calc(var(--after-spacer) * 2 - var(--after-height));
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: #f7fafc;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.personal_data {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.personal_data h3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 22px;
+  text-align: center;
+  color: #f7fafc;
+}
+
+.personal_data h3::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--after-spacer) * -1);
+  left: calc(50% - (125px) / 2);
+  width: 125px;
+  height: var(--after-height);
+  background: linear-gradient(
+    to right,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+}
+
+.personal_data h3 small {
+  margin-top: 5px;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #e2e8f0;
+  text-transform: uppercase;
+}
+
+.personal_data span {
+  margin-top: calc(var(--after-spacer) * 2 - var(--after-height));
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+  color: #f7fafc;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  height: 40px;
+  background: var(--gray-100);
+  text-decoration: none;
+}
+
+nav a span {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: #1a202c;
+  text-decoration: none;
+}
+
+nav a div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+}
+
+.whatsapp {
+  background-color: var(--gray-100);
+}
+.whatsapp div {
+  background-color: var(--secondary-color);
+}
+
+.email {
+  background-color: var(--gray-200);
+}
+.email div {
+  background-color: var(--complementary-color-2);
+}
+
+.facebook {
+  background-color: var(--gray-300);
+}
+.facebook div {
+  background-color: var(--complementary-color-1);
+}
+
+.instagram {
+  background-color: var(--gray-400);
+}
+.instagram div {
+  background-color: var(--primary-color);
+}
