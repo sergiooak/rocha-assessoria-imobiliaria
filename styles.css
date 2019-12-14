@@ -17,22 +17,41 @@
   --after-height: 5px;
 }
 
+@font-face {
+  font-family: 'miles';
+  src: url('assets/fonts/rnsmiles-black-webfont.woff2') format('woff2'),
+       url('assets/fonts/rnsmiles-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'miles';
+  src: url('assets/fonts/rnsmiles-medium-webfont.woff2') format('woff2'),
+       url('assets/fonts/rnsmiles-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   background-color: var(--bg-color);
-  font-family: sans-serif;
+  font-family: 'miles', sans-serif;
   color: var(--text-primary-color);
+  height: 100vh;
 }
 
 main {
   display: flex;
+  min-width: 360px;
+  width: 100vw;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .logo_holder {
-  padding: 40px;
-  padding-bottom: 0px;
+  padding: 35px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
 }
@@ -82,7 +101,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .personal_data h3 {
@@ -162,6 +181,11 @@ nav a div {
   background-color: var(--primary-color);
 }
 
+nav a div img{
+  width: 23px;
+  height: auto;
+}
+
 .whatsapp {
   background-color: var(--gray-100);
 }
@@ -188,4 +212,60 @@ nav a div {
 }
 .instagram div {
   background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 992px) {
+  .logo_holder {
+    padding: 75px;
+    padding-bottom: 0;
+  }
+
+  .logo_holder h1 img {
+    width: 250px;
+  }
+
+  .logo_holder h2 {
+    font-size: 16px;
+  }
+
+  .contact_info {
+    flex-direction: row;
+  }
+
+  .personal_data {
+    min-width: 300px;
+    order: 2;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    height: 50px;
+  }
+
+  
+  nav a div {
+    width: 50px;
+    height: 50px;
+  }
+  
+  nav a div img{
+    width: 29px;
+
+  }
+
+  .personal_links{
+    order: 1;
+  }
+
+  .personal_links a{
+    flex-direction: row;
+  }
+
+  .company_links{
+    order: 3;
+  }
 }
